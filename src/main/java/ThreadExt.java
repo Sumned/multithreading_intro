@@ -15,7 +15,7 @@ public class ThreadExt extends Thread {
 
     @Override
     public void run() {
-        while (counter.limitCheck()){
+        while (counter.limitCheck()) {
             log.info("Thread-" + num + " value = " + counter.plus());
         }
     }

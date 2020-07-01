@@ -10,7 +10,7 @@ public class Counter {
         this.limit = limit;
     }
 
-    synchronized public int plus() {
+    synchronized int plus() {
         return count++;
     }
 
