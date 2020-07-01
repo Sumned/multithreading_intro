@@ -4,18 +4,18 @@ import lombok.extern.log4j.Log4j2;
 @Data
 @Log4j2
 public class RunImpl implements Runnable {
-    private int start;
-    private int limit;
+    private Counter counter;
+    private int num;
 
-    public RunImpl(int start, int limit) {
-        this.start = start;
-        this.limit = limit;
+    public RunImpl(Counter counter, int num) {
+        this.counter = counter;
+        this.num = num;
     }
 
     @Override
     public void run() {
-        for (int i = start; i < limit; i++) {
-            log.info("Thread-0 value = " + i);
+         while (counter.limitCheck()){
+            log.info("Thread-" + num + " value = " + counter.plus());
         }
     }
 }
