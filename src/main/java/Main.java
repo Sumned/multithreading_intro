@@ -1,6 +1,6 @@
 public class Main {
-    static RunImpl run = new RunImpl();
-    static ThreadExt ext = new ThreadExt();
+    private static RunImpl run = new RunImpl();
+    private static ThreadExt ext = new ThreadExt();
 
     public static void main(String[] args) {
         Thread thread = new Thread(run);
